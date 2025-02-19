@@ -15,12 +15,11 @@ maintainers = [
   "Marton Vago <marton.vago95@gmail.com >",
 ]
 readme = "README.md"
-homepage = "https://NAME.seedcase-project.org"
-repository = "https://github.com/seedcase-project/REPO"
+repository = "https://github.com/seedcase-project/example-seed-beetle"
 license = "MIT"
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/seedcase-project/REPO/issues"
+"Bug Tracker" = "https://github.com/seedcase-project/example-seed-beetle/issues"
 
 [tool.poetry.dependencies]
 python = "^3.12"
