@@ -13,7 +13,9 @@ resource_dir = Path(__file__).resolve().parent.parent
 
 folder_path = resource_dir / "data-raw"
 
-url = "https://zenodo.org/records/4932381/files/BeetleMetabolicRate_Dryad.txt?download=1"
+url = (
+    "https://zenodo.org/records/4932381/files/BeetleMetabolicRate_Dryad.txt?download=1"
+)
 
 raw_data = requests.get(url, allow_redirects=True)
 
