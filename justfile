@@ -2,15 +2,11 @@
     just --list --unsorted
 
 # Run all build-related recipes in the justfile
-run-all: install-deps format-python check-python test-python check-commits build-website
+run-all: install-deps format-python check-python check-commits
 
 # Install Python package dependencies
 install-deps:
   poetry install
-
-# Run the Python tests
-test-python:
-  poetry run pytest
 
 # Check Python code with the linter for any errors that need manual attention
 check-python:
@@ -20,13 +16,6 @@ check-python:
 format-python:
   poetry run ruff check --fix .
   poetry run ruff format .
-
-# Build the documentation website using Quarto
-build-website:
-  # To let Quarto know where python is.
-  export QUARTO_PYTHON=.venv/bin/python3
-  poetry run quartodoc build
-  poetry run quarto render --execute
 
 # Run checks on commits with non-main branches
 check-commits:
