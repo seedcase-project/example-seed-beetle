@@ -1,18 +1,14 @@
 [tool.poetry]
-name = "template-python-package"
+name = "example-seed-beetle"
 version = "0.0.1"
 description = ""
 authors = [
   "Luke W. Johnston <lwjohnst@gmail.com>",
   "Kristiane Beicher <kris.beicher@clin.au.dk>",
-  "Signe Kirk Brødbæk <signekb@clin.au.dk>",
-  "Marton Vago <marton.vago95@gmail.com >",
 ]
 maintainers = [
   "Luke W. Johnston <lwjohnst@gmail.com>",
   "Kristiane Beicher <kris.beicher@clin.au.dk>",
-  "Signe Kirk Brødbæk <signekb@clin.au.dk>",
-  "Marton Vago <marton.vago95@gmail.com >",
 ]
 readme = "README.md"
 repository = "https://github.com/seedcase-project/example-seed-beetle"
@@ -24,20 +20,9 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.12"
 
-[tool.poetry.group.test.dependencies]
-pytest = "^8.3.2"
-
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.pytest.ini_options]
-addopts = [
-  # A short traceback mode to make it easier to view
-  "--tb=short",
-  # Use the package in `src/`
-  "--import-mode=importlib",
-]
