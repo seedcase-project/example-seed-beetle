@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-import janitor.polars
+import janitor.polars  # noqa: F401
 import polars as pl
 
 # Set the folder path for raw-data
@@ -48,6 +48,6 @@ df = (
     )
 )
 
-df.write_csv("../data-raw/data-ready.csv")
+df.write_csv(folder_path / "data-ready.csv")
 
 df.glimpse()
