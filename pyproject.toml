@@ -21,6 +21,7 @@ license = "MIT"
 python = "^3.12"
 pyjanitor = "^0.30.0"
 polars = "^1.22.0"
+seedcase-sprout = {git = "https://github.com/seedcase-project/seedcase-sprout.git"}
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.6.2"
