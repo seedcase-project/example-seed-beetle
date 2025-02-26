@@ -59,16 +59,5 @@ properties = sp.PackageProperties(
 )
 
 # Create the path to the package
-package_path = Path(__file__).resolve().parent.parent / "seed-beetle-study"
-package_path.mkdir()
+package_path = Path(__file__).resolve().parent.parent
 package_path = sp.create_package_properties(properties=properties, path=package_path)
-
-
-updated_package_properties = sp.edit_package_properties(
-    path=package_path,
-    properties=sp.PackageProperties(name="seed-beetle-study"),
-)
-
-package_path = sp.write_package_properties(
-    properties=updated_package_properties, path=package_path
-)

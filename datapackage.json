@@ -1,10 +1,10 @@
 {
-  "name": "seed-beetle-study",
-  "id": "beaa2c06-6ec2-4c6d-aa42-f05241711720",
+  "name": "male-seed-beetle",
+  "id": "f997bfe3-f603-4d61-b236-488e09be4f17",
   "title": "Complex mitonuclear interactions and metabolic costs of mating in male seed beetles",
   "description": "Data from the 2015 on metabolic rate, respiratory quotient, body weight and ejaculate weight data from seed beetles with different mitonuclear genotypes.",
   "version": "0.1.0",
-  "created": "2025-02-24T13:20:32+01:00",
+  "created": "2025-02-26T09:09:16+01:00",
   "contributors": [
     {
       "title": "Elina Immonen",
