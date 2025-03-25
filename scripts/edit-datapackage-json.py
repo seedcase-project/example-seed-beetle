@@ -3,7 +3,7 @@ from pprint import pprint
 
 import seedcase_sprout.core as sp
 
-properties = sp.PackageProperties(
+updates = sp.PackageProperties(
     title=(
         "Complex mito-nuclear interactions and metabolic costs of mating "
         "in male seed beetles"
@@ -19,7 +19,7 @@ package_path = Path(__file__).resolve().parent.parent / "datapackage.json"
 
 updated_package_properties = sp.edit_package_properties(
     path=package_path,
-    properties=properties,  # sp.PackageProperties(name="male-seed-beetle"),
+    properties=updates,
 )
 
 package_path = sp.write_package_properties(
