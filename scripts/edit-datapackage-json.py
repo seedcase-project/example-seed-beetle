@@ -1,9 +1,14 @@
 from pathlib import Path
-from pprint import pprint
 
 import seedcase_sprout.core as sp
 
-properties = sp.PackageProperties(
+package_path = Path(__file__).resolve().parent.parent
+
+current_properties = sp.read_properties(
+    path=sp.PackagePath(package_path).properties(),
+)
+
+updated_properties = sp.PackageProperties(
     title=(
         "Complex mito-nuclear interactions and metabolic costs of mating "
         "in male seed beetles"
@@ -15,13 +20,12 @@ properties = sp.PackageProperties(
     ),
 )
 
-package_path = Path(__file__).resolve().parent.parent / "datapackage.json"
-
-updated_package_properties = sp.edit_package_properties(
-    path=package_path,
-    properties=properties,  # sp.PackageProperties(name="male-seed-beetle"),
+updated_package_properties = sp.update_package_properties(
+    current_properties=current_properties,
+    update_properties=updated_properties,
 )
 
-package_path = sp.write_package_properties(
-    properties=updated_package_properties, path=package_path
+sp.write_package_properties(
+    properties=updated_package_properties,
+    path=sp.PackagePath(package_path).properties(),
 )
