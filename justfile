@@ -28,3 +28,7 @@ check-commits:
   else
     echo "Not on main or haven't committed yet."
   fi
+
+# Update all dependencies in lockfile
+update-deps:
+  poetry update
