@@ -51,7 +51,7 @@ df = (
     )
 )
 
-df = df.select(["redcap_id"] + [col for col in df.columns if col != "redcap_id"])
+df = df.select(pl.col("redcap_id"), pl.all().exclude("redcap_id"))
 
 df.write_csv(folder_path / "data-ready-redcap.csv", separator=";")
 
