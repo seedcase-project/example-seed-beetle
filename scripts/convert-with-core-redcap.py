@@ -22,6 +22,8 @@ block_mapping = {1: "Block 1", 2: "Block 2", 3: "Block 3"}
 
 treatment_map = {"V": "Virgin", "M": "Mating"}
 
+# The first column is only for uploading to REDCap, it won't be pulled back into
+# Seedcase. If we need to pull it back in, it should be converted to UUID format.
 df = (
     df.with_columns(
         (pl.col("CYCLE").cast(pl.Utf8) + "0" + pl.col("ID").cast(pl.Utf8)).alias(
