@@ -1,10 +1,10 @@
 {
   "name": "male-seed-beetle",
-  "id": "623ded5f-5a36-48e5-8553-c8ec56108bad",
+  "id": "4035c0b2-853b-44fd-9b33-ee285288c5e0",
   "title": "Complex mitonuclear interactions and metabolic costs of mating in male seed beetles",
-  "description": "Data from the 2015 on metabolic rate, respiratory quotient, body weight and ejaculate weight data from seed beetles with different mitonuclear genotypes.",
+  "description": "\nData from the 2015 on metabolic rate, respiratory quotient, body\nweight and ejaculate weight data from seed beetles with different\nmitonuclear genotypes.\n\nThis repository shows how to use the Seedcase Sprout tools on a data set\nof seed beetle data. The data is from a study by [Immonen et al.\n(2015)](https://onlinelibrary.wiley.com/doi/10.1111/jeb.12789) and is\navailable on [Zenodo](https://zenodo.org/records/4932381).\n",
   "version": "0.1.0",
-  "created": "2025-05-28T09:16:47+02:00",
+  "created": "2025-05-28T13:31:40+02:00",
   "contributors": [
     {
       "title": "Elina Immonen",
