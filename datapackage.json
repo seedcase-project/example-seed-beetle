@@ -1,10 +1,10 @@
 {
   "name": "male-seed-beetle",
-  "id": "47b86440-c181-471f-9553-5f5e29c76c8a",
+  "id": "623ded5f-5a36-48e5-8553-c8ec56108bad",
   "title": "Complex mitonuclear interactions and metabolic costs of mating in male seed beetles",
   "description": "Data from the 2015 on metabolic rate, respiratory quotient, body weight and ejaculate weight data from seed beetles with different mitonuclear genotypes.",
   "version": "0.1.0",
-  "created": "2025-04-07T10:41:26+02:00",
+  "created": "2025-05-28T09:16:47+02:00",
   "contributors": [
     {
       "title": "Elina Immonen",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "title": "Johanna Liljestrand-R\u00f6nn",
+      "title": "Johanna Liljestrand-Rönn",
       "path": "https://www.uu.se/en/contact-and-organisation/staff?query=N2-1345",
       "roles": [
         "creator"
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "title": "G\u00f6ran Arnqvist",
+      "title": "Göran Arnqvist",
       "path": "https://www.uu.se/en/contact-and-organisation/staff?query=N1-1284",
       "roles": [
         "creator"
@@ -47,6 +47,33 @@
       "name": "CCO_1.0",
       "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
       "title": "CCO 1.0 UNIVERSAL"
+    }
+  ],
+  "resources": [
+    {
+      "name": "seed-beetles",
+      "path": "resources/seed-beetles/data.parquet",
+      "title": "Seed beetle data",
+      "description": "Some data on seed beetles.",
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "title": "ID",
+            "type": "integer",
+            "description": "Unique identifier for the record."
+          },
+          {
+            "name": "name",
+            "title": "Name",
+            "type": "string",
+            "description": "Name of the record."
+          }
+        ],
+        "primary_key": [
+          "id"
+        ]
+      }
     }
   ],
   "sources": [
