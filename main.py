@@ -1,11 +1,8 @@
-from pathlib import Path
+import seedcase_sprout as sp
 
-import seedcase_sprout.core as sp
+from scripts.resource_properties import resource_properties_seed_beetles
 
-default_properties = sp.PackageProperties.default().compact_dict
-
-properties = sp.PackageProperties(
-    **default_properties,
+properties = sp.PackageProperties.from_default(
     name="male-seed-beetle",
     title=(
         "Complex mitonuclear interactions and metabolic costs of mating "
@@ -59,11 +56,10 @@ properties = sp.PackageProperties(
             title="CCO 1.0 UNIVERSAL",
         )
     ],
+    resources=[resource_properties_seed_beetles()],
 )
+
 
 # Create the path to the package
-package_path = Path(__file__).resolve().parent.parent
 
-sp.write_package_properties(
-    properties=properties, path=sp.PackagePath(package_path).properties()
-)
+sp.write_package_properties(properties=properties)
