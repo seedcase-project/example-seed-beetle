@@ -1,21 +1,25 @@
-from pathlib import Path
+from textwrap import dedent
 
-import seedcase_sprout.core as sp
+import seedcase_sprout as sp
 
-default_properties = sp.PackageProperties.default().compact_dict
+from .resource_properties import resource_properties
 
-properties = sp.PackageProperties(
-    **default_properties,
+properties = sp.PackageProperties.from_default(
     name="male-seed-beetle",
     title=(
         "Complex mitonuclear interactions and metabolic costs of mating "
         "in male seed beetles"
     ),
-    description=(
-        "Data from the 2015 on metabolic rate, respiratory quotient, body "
-        "weight and ejaculate weight data from seed beetles with different "
-        "mitonuclear genotypes."
-    ),
+    description=dedent("""
+        Data from the 2015 on metabolic rate, respiratory quotient, body
+        weight and ejaculate weight data from seed beetles with different
+        mitonuclear genotypes.
+
+        This repository shows how to use the Seedcase Sprout tools on a data set
+        of seed beetle data. The data is from a study by [Immonen et al.
+        (2015)](https://onlinelibrary.wiley.com/doi/10.1111/jeb.12789) and is
+        available on [Zenodo](https://zenodo.org/records/4932381).
+    """),
     contributors=[
         sp.ContributorProperties(
             title="Elina Immonen",
@@ -59,11 +63,5 @@ properties = sp.PackageProperties(
             title="CCO 1.0 UNIVERSAL",
         )
     ],
-)
-
-# Create the path to the package
-package_path = Path(__file__).resolve().parent.parent
-
-sp.write_package_properties(
-    properties=properties, path=sp.PackagePath(package_path).properties()
+    resources=[resource_properties],
 )
