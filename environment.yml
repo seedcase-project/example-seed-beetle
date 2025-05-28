@@ -1,0 +1,16 @@
+name: beetle
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - polars
+  - pyjanitor
+  - frictionless
+  - openpyxl
+  - xlrd
+  - pyarrow
+  - pip
+  - pip:
+      # Add any PyPI-only packages here, if needed
+      # - some-pypi-only-package
