@@ -25,9 +25,6 @@ dependencies = [
 issues = "https://github.com/seedcase-project/example-seed-beetle/issues"
 repository = "https://github.com/seedcase-project/example-seed-beetle"
 
-[tool.uv.sources]
-seedcase-sprout = { git = "https://github.com/seedcase-project/seedcase-sprout" }
-
 [dependency-groups]
 dev = [
     "commitizen>=4.5.1",
