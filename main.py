@@ -1,9 +1,11 @@
 import seedcase_sprout as sp
 
-from scripts.package_properties import properties
 
-# Create the path to the package
+def main():
+    """Pipeline for creating the seed beetle Data Package."""
+    # Create the properties script in the default location.
+    sp.create_properties_script()
+
+
 if __name__ == "__main__":
-    sp.write_package_properties(properties=properties)
-    text = sp.as_readme_text(properties)
-    sp.write_file(text, sp.PackagePath().readme())
+    main()
