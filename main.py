@@ -43,6 +43,22 @@ def main():
         data=data, resource_properties=resource_properties_seed_beetle_metabolic_rate
     )
 
+    # Read in batch data file for the resource as a list.
+    batch_data = sp.read_resource_batches(
+        resource_properties=resource_properties_seed_beetle_metabolic_rate
+    )
+    # Join batch data into a single Polars DataFrame (and remove potential duplicates).
+    joined_data = sp.join_resource_batches(
+        data_list=batch_data,
+        resource_properties=resource_properties_seed_beetle_metabolic_rate,
+    )
+
+    # Write the joined data to the resource.
+    sp.write_resource_data(
+        data=joined_data,
+        resource_properties=resource_properties_seed_beetle_metabolic_rate,
+    )
+
 
 if __name__ == "__main__":
     main()
