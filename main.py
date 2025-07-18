@@ -1,3 +1,4 @@
+import polars as pl
 import seedcase_sprout as sp
 
 from scripts.properties import properties
@@ -12,7 +13,21 @@ def main():
     - `scripts/convert-with-core.py`
     The tidied data should be available in `data-raw/data-ready.csv`.
     """
+    # Create the properties script (will not be overwritten).
     sp.create_properties_script()
+
+    # Load the tidied data from the CSV file.
+    data = pl.read_csv(sp.PackagePath().root() / "data-raw" / "data-ready.csv")
+    # Extract field properties.
+    field_properties = sp.extract_field_properties(
+        data=data,
+    )
+    # Create the resource properties script (will not be overwritten).
+    sp.create_resource_properties_script(
+        resource_name="seed-beetle-metabolic-rate",
+        fields=field_properties,
+    )
+
     # Write properties to `datapackage.json`.
     sp.write_properties(properties=properties)
     # Create text for a README of the data package.
