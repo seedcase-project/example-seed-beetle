@@ -9,7 +9,7 @@
         of seed beetle data. The data is from a study by [Immonen et al.
         (2015)](https://onlinelibrary.wiley.com/doi/10.1111/jeb.12789) and is
         available on [Zenodo](https://zenodo.org/records/4932381).
-    
+
 
 | Field    | Value                                   |
 |----------|-----------------------------------------|
@@ -20,4 +20,7 @@
 | Created  | 17 July 2025, 14:23  |
 | Licenses | CCO_1.0  |
 
-No resources available.
+## Data Resources
+
+  1. **Seed beetle metabolic rate**: This dataset contains metabolic rate, respiratory quotient, body weight and
+        ejaculate weight data from seed beetles with different mitonuclear genotypes.
