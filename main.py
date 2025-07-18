@@ -4,8 +4,14 @@ from scripts.properties import properties
 
 
 def main():
-    """Pipeline for creating the seed beetle Data Package."""
-    # Create the properties script in the default location.
+    """Pipeline for creating the seed beetle Data Package.
+
+    Note: Make sure to run the following scripts before this pipeline to
+    download and tidy the data:
+    - `scripts/download.py`
+    - `scripts/convert-with-core.py`
+    The tidied data should be available in `data-raw/data-ready.csv`.
+    """
     sp.create_properties_script()
     # Write properties to `datapackage.json`.
     sp.write_properties(properties=properties)
