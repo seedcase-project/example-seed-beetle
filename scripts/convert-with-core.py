@@ -20,7 +20,7 @@ df = pl.read_csv(folder_path / "data-ready.csv", infer_schema_length=100_000)
 
 block_mapping = {1: "Block 1", 2: "Block 2", 3: "Block 3"}
 
-treatment_map = {"V": "Virgin", "M": "Mating"}
+treatment_map = {"V": "Virgin", "M": "Mated"}
 
 df = (
     df.with_columns(
