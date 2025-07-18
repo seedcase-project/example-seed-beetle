@@ -18,6 +18,7 @@ dependencies = [
     "polars>=1.27.0",
     "pyjanitor>=0.31.0",
     "python-dotenv>=1.1.0",
+    "requests>=2.32.4",
     "seedcase-sprout>=0.46.3",
 ]
 
