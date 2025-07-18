@@ -2,6 +2,9 @@ import polars as pl
 import seedcase_sprout as sp
 
 from scripts.properties import properties
+from scripts.resource_properties_seed_beetle_metabolic_rate import (
+    resource_properties_seed_beetle_metabolic_rate,
+)
 
 
 def main():
@@ -34,6 +37,11 @@ def main():
     readme_text = sp.as_readme_text(properties)
     # Write the README text to a `README.md` file.
     sp.write_file(readme_text, sp.PackagePath().readme())
+
+    # Write tidied data to batch.
+    sp.write_resource_batch(
+        data=data, resource_properties=resource_properties_seed_beetle_metabolic_rate
+    )
 
 
 if __name__ == "__main__":
