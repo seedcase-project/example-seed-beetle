@@ -3,8 +3,11 @@ import seedcase_sprout as sp
 resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
     ## Required:
     name="seed-beetle-metabolic-rate",
-    title="",
-    description="",
+    title="Seed beetle metabolic rate",
+    description=(
+        """This dataset contains metabolic rate, respiratory quotient, body weight and
+        ejaculate weight data from seed beetles with different mitonuclear genotypes."""
+    ),
     ## Optional:
     type="table",
     format="parquet",
@@ -17,9 +20,13 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="cycle",
                 type="integer",
                 ## Optional
-                # title="",
+                title="Cycle",
                 # format="",
-                # description="",
+                description=(
+                    """Focal cycle in the respirometry. Note that the number one here
+                    corresponds to the real cycle number two, as the first one was
+                    removed as a burn-in."""
+                ),
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -29,7 +36,7 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="o2_consumed",
                 type="number",
                 ## Optional
-                # title="",
+                title="O2 consumed",
                 # format="",
                 # description="",
                 # example="",
@@ -41,7 +48,7 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="co2_produced",
                 type="number",
                 ## Optional
-                # title="",
+                title="CO2 produced",
                 # format="",
                 # description="",
                 # example="",
@@ -53,7 +60,7 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="respiratory_quotient",
                 type="number",
                 ## Optional
-                # title="",
+                title="Respiratory quotient",
                 # format="",
                 # description="",
                 # example="",
@@ -65,9 +72,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="block",
                 type="string",
                 ## Optional
-                # title="",
+                title="Block",
                 # format="",
-                # description="",
+                description="Experimental block.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -77,7 +84,7 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="activity",
                 type="number",
                 ## Optional
-                # title="",
+                title="Activity",
                 # format="",
                 # description="",
                 # example="",
@@ -89,9 +96,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="strain",
                 type="string",
                 ## Optional
-                # title="",
+                title="Strain",
                 # format="",
-                # description="",
+                description="Line identity.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -101,7 +108,7 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="mitochondrial_dna_lineage",
                 type="string",
                 ## Optional
-                # title="",
+                title="Mitochondrial DNA lineage",
                 # format="",
                 # description="",
                 # example="",
@@ -113,7 +120,7 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="nuclear_lineage",
                 type="string",
                 ## Optional
-                # title="",
+                title="Nuclear lineage",
                 # format="",
                 # description="",
                 # example="",
@@ -125,9 +132,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="mating_treatment",
                 type="string",
                 ## Optional
-                # title="",
+                title="Mating treatment",
                 # format="",
-                # description="",
+                description="Mated or virgin.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -137,9 +144,11 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="coadaptation",
                 type="integer",
                 ## Optional
-                # title="",
+                title="Coadaptation",
                 # format="",
-                # description="",
+                description=(
+                    """Coadaptation of the mitochondrial and nuclear lineage genomes."""
+                ),
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -149,9 +158,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="virgin_body_weight",
                 type="number",
                 ## Optional
-                # title="",
+                title="Virgin body weight",
                 # format="",
-                # description="",
+                description="Unit: g.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -161,9 +170,12 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="body_weight_after_mating",
                 type="number",
                 ## Optional
-                # title="",
+                title="Body weight after mating",
                 # format="",
-                # description="",
+                description=(
+                    """Body weight after mating, prior to respirometry measurements.
+                    Unit: g."""
+                ),
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -173,9 +185,12 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="mated_body_weight_after_respirometry",
                 type="number",
                 ## Optional
-                # title="",
+                title="Mated body weight after respirometry",
                 # format="",
-                # description="",
+                description=(
+                    """Mated male body weight after the respirometry, prior to second
+                    mating. Unit: g."""
+                ),
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -185,9 +200,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="ejaculate_weight_first_mating",
                 type="number",
                 ## Optional
-                # title="",
+                title="Ejaculate weight in the first mating",
                 # format="",
-                # description="",
+                description="Unit: g.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -197,9 +212,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="ejaculate_weight_second_mating",
                 type="number",
                 ## Optional
-                # title="",
+                title="Ejaculate weight in the second mating",
                 # format="",
-                # description="",
+                description="Unit: g.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -209,9 +224,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="copulation_duration_first_mating",
                 type="number",
                 ## Optional
-                # title="",
+                title="Copulation duration of the first mating",
                 # format="",
-                # description="",
+                description="Unit: sec.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -221,9 +236,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="copulation_duration_second_mating",
                 type="number",
                 ## Optional
-                # title="",
+                title="Copulation duration of the second mating",
                 # format="",
-                # description="",
+                description="Unit: sec.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -233,9 +248,9 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
                 name="id",
                 type="integer",
                 ## Optional
-                # title="",
+                title="ID",
                 # format="",
-                # description="",
+                description="Experimental subject identity.",
                 # example="",
                 # categories=[],
                 # categories_ordered=False,
@@ -243,7 +258,7 @@ resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
         ],
         ## Optional
         # fields_match=["equal"],
-        # primary_key=[""],
+        primary_key=["id"],
         # unique_keys=[[""]],
         # foreign_keys=[
         #     sp.TableSchemaForeignKeyProperties(
