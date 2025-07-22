@@ -12,7 +12,7 @@ def main():
 
     Note: Make sure to run the following scripts before this pipeline to
     download and tidy the data:
-    - `scripts/download.py`
+    - `scripts/download-data.py`
     - `scripts/convert-with-core.py`
     The tidied data should be available in `data-raw/data-ready.csv`.
     """
