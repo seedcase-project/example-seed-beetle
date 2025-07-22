@@ -12,7 +12,6 @@ properties = sp.PackageProperties(
         "in male seed beetles"
     ),
     description=(
-        # TODO: removed `dedent` here. Let's see if it works without it.
         """
         Data from the 2015 on metabolic rate, respiratory quotient, body
         weight and ejaculate weight data from seed beetles with different
