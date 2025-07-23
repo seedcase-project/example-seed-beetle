@@ -6,7 +6,7 @@ import polars as pl
 
 # Set the folder path for raw-data
 resource_dir = Path(__file__).resolve().parent.parent
-folder_path = resource_dir / "data-raw"
+folder_path = resource_dir / "raw"
 
 # Transform from tab sep to comma sep
 with open(folder_path / "data.tsv", "r") as tsv:

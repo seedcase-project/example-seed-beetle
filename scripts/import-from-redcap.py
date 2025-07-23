@@ -14,7 +14,7 @@ if not token:
 
 # Get the directory where the script is located
 resource_dir = Path(__file__).resolve().parent.parent
-folder_path = resource_dir / "data-raw"
+folder_path = resource_dir / "raw"
 output_file = folder_path / "data-from-redcap.csv"
 
 data = {
