@@ -13,7 +13,7 @@ def main():
     Note: Make sure to run the following scripts before this pipeline to
     download and tidy the data:
     - `scripts/download-data.py`
-    - `scripts/convert-with-core.py`
+    - `scripts/clean-data.py`
     The tidied data should then be available in `raw/data-ready.csv`.
     """
     # Create the properties script (will not be overwritten).
