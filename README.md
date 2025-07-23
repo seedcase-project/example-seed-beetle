@@ -1,14 +1,13 @@
 # Complex mitonuclear interactions and metabolic costs of mating in male seed beetles
 
+Data from the 2015 on metabolic rate, respiratory quotient, body
+weight and ejaculate weight data from seed beetles with different
+mitonuclear genotypes.
 
-        Data from the 2015 on metabolic rate, respiratory quotient, body
-        weight and ejaculate weight data from seed beetles with different
-        mitonuclear genotypes.
-
-        This repository shows how to use the Seedcase Sprout tools on a data set
-        of seed beetle data. The data is from a study by [Immonen et al.
-        (2015)](https://onlinelibrary.wiley.com/doi/10.1111/jeb.12789) and is
-        available on [Zenodo](https://zenodo.org/records/4932381).
+This repository shows how to use the Seedcase Sprout tools on a data set
+of seed beetle data. The data is from a study by [Immonen et al.
+(2015)](https://onlinelibrary.wiley.com/doi/10.1111/jeb.12789) and is
+available on [Zenodo](https://zenodo.org/records/4932381).
 
 
 | Field    | Value                                   |
