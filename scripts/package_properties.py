@@ -4,7 +4,7 @@ from .resource_properties_seed_beetle_metabolic_rate import (
     resource_properties_seed_beetle_metabolic_rate,
 )
 
-properties = sp.PackageProperties(
+package_properties = sp.PackageProperties(
     ## Required:
     name="example-seed-beetle",
     title=(

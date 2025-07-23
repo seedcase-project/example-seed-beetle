@@ -1,7 +1,7 @@
 import polars as pl
 import seedcase_sprout as sp
 
-from scripts.properties import properties
+from scripts.package_properties import package_properties
 from scripts.resource_properties_seed_beetle_metabolic_rate import (
     resource_properties_seed_beetle_metabolic_rate,
 )
@@ -32,9 +32,9 @@ def main():
     )
 
     # Write properties to `datapackage.json`.
-    sp.write_properties(properties=properties)
+    sp.write_properties(properties=package_properties)
     # Create text for a README of the data package.
-    readme_text = sp.as_readme_text(properties)
+    readme_text = sp.as_readme_text(package_properties)
     # Write the README text to a `README.md` file.
     sp.write_file(readme_text, sp.PackagePath().readme())
 
