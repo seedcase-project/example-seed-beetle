@@ -51,10 +51,10 @@
   ],
   "resources": [
     {
-      "name": "seed-beetle-metabolic-rate",
-      "path": "resources/seed-beetle-metabolic-rate/data.parquet",
+      "name": "metabolic-rate",
+      "path": "resources/metabolic-rate/data.parquet",
       "type": "table",
-      "title": "Seed beetle metabolic rate",
+      "title": "Metabolic rate of the seed beetles",
       "description": "This dataset contains metabolic rate, respiratory quotient, body weight and\n        ejaculate weight data from seed beetles with different mitonuclear genotypes.",
       "format": "parquet",
       "mediatype": "application/parquet",
