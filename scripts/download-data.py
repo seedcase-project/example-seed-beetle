@@ -1,7 +1,7 @@
 """Downloads a data file from a given URL.
 
 This is the most basic of the download data scripts. It requires that the url for
-the data is provided as an argument, and it assumes that a data-raw folder
+the data is provided as an argument, and it assumes that a raw folder
 has been created containing a .gitignore file.
 """
 
@@ -11,7 +11,7 @@ import requests
 
 resource_dir = Path(__file__).resolve().parent.parent
 
-folder_path = resource_dir / "data-raw"
+folder_path = resource_dir / "raw"
 
 url = (
     "https://zenodo.org/records/4932381/files/BeetleMetabolicRate_Dryad.txt?download=1"

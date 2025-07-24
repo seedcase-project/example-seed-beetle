@@ -1,6 +1,5 @@
 # Complex mitonuclear interactions and metabolic costs of mating in male seed beetles
 
-
 Data from the 2015 on metabolic rate, respiratory quotient, body
 weight and ejaculate weight data from seed beetles with different
 mitonuclear genotypes.
@@ -13,13 +12,14 @@ available on [Zenodo](https://zenodo.org/records/4932381).
 
 | Field    | Value                                   |
 |----------|-----------------------------------------|
-| Name     | `male-seed-beetle`     |
-| ID       | `4035c0b2-853b-44fd-9b33-ee285288c5e0`       |
+| Name     | `example-seed-beetle`     |
+| ID       | `8dbef2a2-0354-4996-bc9e-71a6c79aec7d`       |
 | Version  | `0.1.0`  |
 | Homepage | N/A |
-| Created  | 28 May 2025, 13:31  |
+| Created  | 17 July 2025, 14:23  |
 | Licenses | CCO_1.0  |
 
 ## Data Resources
 
-  1. **Seed beetle data**: Some data on seed beetles.
+  1. **Metabolic rate of the seed beetles**: This dataset contains metabolic rate, respiratory quotient, body weight and
+        ejaculate weight data from seed beetles with different mitonuclear genotypes.
