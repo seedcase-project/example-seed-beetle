@@ -1,7 +1,7 @@
 import seedcase_sprout as sp
 
-from .resource_properties_seed_beetle_metabolic_rate import (
-    resource_properties_seed_beetle_metabolic_rate,
+from .resource_properties_metabolic_rate import (
+    resource_properties_metabolic_rate,
 )
 
 package_properties = sp.PackageProperties(

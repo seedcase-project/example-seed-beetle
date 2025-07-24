@@ -1,9 +1,9 @@
 import seedcase_sprout as sp
 
-resource_properties_seed_beetle_metabolic_rate = sp.ResourceProperties(
+resource_properties_metabolic_rate = sp.ResourceProperties(
     ## Required:
-    name="seed-beetle-metabolic-rate",
-    title="Seed beetle metabolic rate",
+    name="metabolic-rate",
+    title="Metabolic rate of the seed beetles",
     description=(
         """This dataset contains metabolic rate, respiratory quotient, body weight and
         ejaculate weight data from seed beetles with different mitonuclear genotypes."""

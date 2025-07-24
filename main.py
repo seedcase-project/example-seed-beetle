@@ -2,8 +2,8 @@ import polars as pl
 import seedcase_sprout as sp
 
 from scripts.package_properties import package_properties
-from scripts.resource_properties_seed_beetle_metabolic_rate import (
-    resource_properties_seed_beetle_metabolic_rate,
+from scripts.resource_properties_metabolic_rate import (
+    resource_properties_metabolic_rate,
 )
 
 
@@ -27,7 +27,7 @@ def main():
     )
     # Create the resource properties script (will not be overwritten).
     sp.create_resource_properties_script(
-        resource_name="seed-beetle-metabolic-rate",
+        resource_name="metabolic-rate",
         fields=field_properties,
     )
 
@@ -40,23 +40,23 @@ def main():
 
     # Write tidied data to batch.
     sp.write_resource_batch(
-        data=data, resource_properties=resource_properties_seed_beetle_metabolic_rate
+        data=data, resource_properties=resource_properties_metabolic_rate
     )
 
     # Read in batch data file for the resource as a list.
     batch_data = sp.read_resource_batches(
-        resource_properties=resource_properties_seed_beetle_metabolic_rate
+        resource_properties=resource_properties_metabolic_rate
     )
     # Join batch data into a single Polars DataFrame (and remove potential duplicates).
     joined_data = sp.join_resource_batches(
         data_list=batch_data,
-        resource_properties=resource_properties_seed_beetle_metabolic_rate,
+        resource_properties=resource_properties_metabolic_rate,
     )
 
     # Write the joined data to the resource.
     sp.write_resource_data(
         data=joined_data,
-        resource_properties=resource_properties_seed_beetle_metabolic_rate,
+        resource_properties=resource_properties_metabolic_rate,
     )
 
 
