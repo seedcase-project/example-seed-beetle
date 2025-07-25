@@ -55,7 +55,7 @@
       "path": "resources/metabolic-rate/data.parquet",
       "type": "table",
       "title": "Metabolic rate of the seed beetles",
-      "description": "This dataset contains metabolic rate, respiratory quotient, body weight and\n        ejaculate weight data from seed beetles with different mitonuclear genotypes.",
+      "description": "This dataset contains metabolic rate, respiratory quotient, body weight and\nejaculate weight data from seed beetles with different mitonuclear genotypes.",
       "format": "parquet",
       "mediatype": "application/parquet",
       "schema": {
@@ -64,7 +64,7 @@
             "name": "cycle",
             "title": "Cycle",
             "type": "integer",
-            "description": "Focal cycle in the respirometry. Note that the number one here\n                    corresponds to the real cycle number two, as the first one was\n                    removed as a burn-in. Original field name: `CYCLE`."
+            "description": "Focal cycle in the respirometry. Note that the number one here\ncorresponds to the real cycle number two, as the first one was\nremoved as a burn-in. Original field name: `CYCLE`."
           },
           {
             "name": "o2_consumed",
@@ -124,7 +124,7 @@
             "name": "coadaptation",
             "title": "Coadaptation",
             "type": "integer",
-            "description": "Coadaptation of the mitochondrial and nuclear lineage genomes.\n                    Original field name: `COEVOL`."
+            "description": "Coadaptation of the mitochondrial and nuclear lineage genomes.\nOriginal field name: `COEVOL`."
           },
           {
             "name": "virgin_body_weight",
@@ -136,13 +136,13 @@
             "name": "body_weight_after_mating",
             "title": "Body weight after mating",
             "type": "number",
-            "description": "Body weight after mating, prior to respirometry measurements.\n                    Unit: g. Original field name: `W_M1`."
+            "description": "Body weight after mating, prior to respirometry measurements.\nUnit: g. Original field name: `W_M1`."
           },
           {
             "name": "mated_body_weight_after_respirometry",
             "title": "Mated body weight after respirometry",
             "type": "number",
-            "description": "Mated male body weight after the respirometry, prior to second\n                    mating. Unit: g. Original field name: `W_M1R`."
+            "description": "Mated male body weight after the respirometry, prior to second\nmating. Unit: g. Original field name: `W_M1R`."
           },
           {
             "name": "ejaculate_weight_first_mating",
