@@ -22,4 +22,4 @@ available on [Zenodo](https://zenodo.org/records/4932381).
 ## Data Resources
 
   1. **Metabolic rate of the seed beetles**: This dataset contains metabolic rate, respiratory quotient, body weight and
-        ejaculate weight data from seed beetles with different mitonuclear genotypes.
+ejaculate weight data from seed beetles with different mitonuclear genotypes.
