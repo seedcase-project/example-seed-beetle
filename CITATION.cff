@@ -1,23 +1,26 @@
-# TODO: Add title of data package.
-title: ""
-# TODO: Add abstract of data package.
-abstract: ""
+title: "Example Seed Beetle Data Package"
+abstract: "This data package contains metabolic rate, respiratory quotient, body weight and ejaculate weight data from seed beetles with different mitonuclear genotypes. It serves as an example for creating a data package using the Seedcase tools."
 authors:
+  - family-names: Johnston
+    given-names: Luke W.
+    orcid: https://orcid.org/0000-0003-4169-2616
+    affiliation: "Steno Diabetes Center Aarhus"
+  - family-names: Beicher
+    given-names: Kristiane
+    orcid: https://orcid.org/0000-0001-7556-9566
+    affiliation: "Steno Diabetes Center Aarhus"
   - family-names: Brødbæk
     given-names: Signe Kirk
-  # TODO: Add ORCID and affiliation for the author.
-    orcid: ""
-    affiliation: ""
-  # TODO: Add more authors as needed.
-  # - family-names: ""
-  #   given-names: ""
-  #   orcid: ""
-  #   affiliation: ""
+    orcid: https://orcid.org/0009-0000-2208-7088
+    affiliation: "Steno Diabetes Center Aarhus"
 cff-version: 1.2.0
 # doi:
 keywords:
-  # TODO: Add keywords relevant to the project.
-  - ""
+  - "Data Package"
+  - "Seedcase"
+  - "Seed Beetle"
+  - "Metabolic Rate"
+  - "Respiratory Quotient"
 # TODO: Add a data license for the data package.
 license: ""
 message: "If you use this data package, please cite it using these metadata."

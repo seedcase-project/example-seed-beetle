@@ -1,8 +1,7 @@
 [project]
 name = "example-seed-beetle"
 version = "0.1.0"
-# TODO: Add a description of the package.
-description = "This is an example Data Package with seed beetle data."
+description = "This is an example Data Package using Seedcase to structure and document seed beetle data."
 authors = [
   {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
   {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
