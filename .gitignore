@@ -2,8 +2,6 @@
 _ignore
 bin/
 dev/
-_temp/
-raw/
 
 # Temporary files
 *.tmp
@@ -27,7 +25,13 @@ venv.bak/
 venv
 __pycache__/
 *.py[cod]
+
+# Raw data files and folders
 *.parquet
+*.csv
+/data-raw/
+/raw/
+/data/
 
 # MacOS
 .DS_Store
@@ -35,16 +39,15 @@ __pycache__/
 # Quarto
 /.quarto/
 docs/.quarto/
-
-# Quartodoc
-objects.json
+*.ipynb
+*.quarto_ipynb
+*_files/
 
 # Website generation
 _site
 _book
 public
 site
-
 
 # Misc files
 *.log

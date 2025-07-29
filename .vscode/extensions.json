@@ -15,8 +15,7 @@
     "charliermarsh.ruff",
     "pshaddel.conventional-branch",
     "tekumara.typos-vscode",
-    "EditorConfig.EditorConfig",
-    "samuelcolvin.jinjahtml"
+    "EditorConfig.EditorConfig"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

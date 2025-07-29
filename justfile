@@ -2,7 +2,11 @@
     just --list --unsorted
 
 # Run all build-related recipes in the justfile
-run-all: install-deps format-python check-python check-spelling check-commits test
+run-all: install-deps format-python check-python check-spelling check-commits build
+
+# List all TODO items in the repository
+list-todos:
+  grep -R -n --exclude="*.code-snippets" "TODO" *
 
 # Install the pre-commit hooks
 install-precommit:
@@ -42,23 +46,6 @@ check-commits:
 check-spelling:
   uv run typos
 
-test:
-  #!/bin/zsh
-  temp_dir="_temp/test-data-package"
-  rm -rf $temp_dir
-  mkdir -p $temp_dir
-  # vcs-ref means the current commit/head, not a tag.
-  # `.` means the current directory contains the template.
-  uvx copier copy --vcs-ref=HEAD . $temp_dir \
-    --defaults \
-    --data package_abbrev= "test-data-package" \
-    --data package_github="first-last/test-data-package" \
-    --data author_given_name="First" \
-    --data author_family_name="Last" \
-    --data author_email="first.last@example.com"
-  # TODO: Other checks/tests?
-
-cleanup:
-  #!/bin/zsh
-  temp_dir=$("_temp/test-data-package"))
-  rm -rf $temp_dir
+# Re-build the data package
+build:
+  uv run main.py
