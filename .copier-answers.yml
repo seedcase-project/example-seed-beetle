@@ -1,0 +1,11 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.11.1
+_src_path: gh:seedcase-project/template-data-package
+author_email: signekb@clin.au.dk
+author_family_name: Brødbæk
+author_given_name: Signe Kirk
+copyright_year: '2025'
+github_board_number: '18'
+package_abbrev: example-seed-beetle
+package_github_repo: seedcase-project/example-seed-beetle
+review_team: '@seedcase-project/developers'

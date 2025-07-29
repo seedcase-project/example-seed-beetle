@@ -1,1 +1,1 @@
-"""Scripts for making the data package."""
+"""Processing and build pipeline scripts."""

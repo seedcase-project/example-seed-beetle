@@ -1,24 +1,24 @@
 [project]
 name = "example-seed-beetle"
 version = "0.1.0"
-description = "Add your description here"
+description = "This is an example Data Package using Seedcase to structure and document seed beetle data."
 authors = [
   {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
   {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  {name = "Signe Kirk Brødbæk", email = "signekb@clin.au.dk" },
 ]
 maintainers = [
   {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
   {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  {name = "Signe Kirk Brødbæk", email = "signekb@clin.au.dk" },
 ]
 readme = "README.md"
-license = "MIT"
-license-files = ["LICENSE.md"]
+# TODO: Update with a license for the data.
+license = "MIT AND "
+license-files = ["LICENSE-MIT.md", ""]
 requires-python = ">=3.12"
 dependencies = [
-    "polars>=1.27.0",
-    "pyjanitor>=0.31.0",
-    "python-dotenv>=1.1.0",
-    "requests>=2.32.4",
+    "polars>=1.31.0",
     "seedcase-sprout>=0.47.1",
 ]
 
@@ -28,7 +28,8 @@ repository = "https://github.com/seedcase-project/example-seed-beetle"
 
 [dependency-groups]
 dev = [
-    "commitizen>=4.5.1",
+    "commitizen>=4.8.3",
     "pre-commit>=4.2.0",
-    "ruff>=0.11.4",
+    "ruff>=0.12.5",
+    "typos>=1.34.0",
 ]
