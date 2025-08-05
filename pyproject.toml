@@ -1,6 +1,6 @@
 [project]
 name = "example-seed-beetle"
-version = "0.1.0"
+version = "0.2.0"
 description = "This is an example Data Package using Seedcase to structure and document seed beetle data."
 authors = [
   {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
