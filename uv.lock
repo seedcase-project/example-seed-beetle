@@ -494,7 +494,7 @@ wheels = [
 
 [[package]]
 name = "seedcase-sprout"
-version = "0.48.0"
+version = "0.48.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dacite" },
@@ -503,9 +503,9 @@ dependencies = [
     { name = "jsonschema" },
     { name = "polars" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/92/38/920339207604762838250b5fe85b7f0cd7501914fa35d7fafd7bb8c0ca92/seedcase_sprout-0.48.0.tar.gz", hash = "sha256:a5a9983267dfb9a199892f5b418465d8966194328c1ba4a82b55858e979d6fce", size = 1178886, upload-time = "2025-08-25T10:53:02.018Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/0b/6e/ee1794e68a05720eddf343d13001a8f2c02c9fc190a773c41bc78adef491/seedcase_sprout-0.48.1.tar.gz", hash = "sha256:484558aaaa76ba3bc1c10963c68a26a8a2fdf81b270823d609dbafe62d854ad5", size = 1180382, upload-time = "2025-09-01T15:03:24.397Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/53/82/27b42b645bbbc5f8e1c9ab70eca1e5e9352f2f5f771478be23fcc2665d97/seedcase_sprout-0.48.0-py3-none-any.whl", hash = "sha256:970705afd8bcda877b0d5dfc7485c09065450b553b98c3da64547cb464fc3996", size = 69546, upload-time = "2025-08-25T10:53:00.784Z" },
+    { url = "https://files.pythonhosted.org/packages/07/cd/747eb04cd97e8b440b3af7cc7d2b6fa9638695ba5a0038b79eb081772e50/seedcase_sprout-0.48.1-py3-none-any.whl", hash = "sha256:bd801d5535a4451c14ccbd61975a5ae5e950bf520314c51257cb28b2a9c91110", size = 69609, upload-time = "2025-09-01T15:03:22.55Z" },
 ]
 
 [[package]]
