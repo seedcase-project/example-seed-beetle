@@ -1,0 +1,93 @@
+---
+title: "Working with Git LFS"
+---
+
+## Working with Git LFS on GenomeDK
+
+In `example-seed-beetle`, data kept in the `data-raw` folder is tracked
+using [Git LFS](https://git-lfs.com/) with a local LFS store on
+GenomeDK. This means that the contents of data files are stored on
+GenomeDK and only pointers to these files are uploaded to GitHub. On
+GenomeDK you can see the contents of the data files in two places: in
+your working copy of the project in the `data-raw` folder and in a
+folder outside the project directory called the LFS store.
+
+When working with data or adding new data to the project, it is
+important to take care that the Git LFS configuration is not changed and
+that sensitive data is always tracked by Git LFS. Any data that is not
+tracked by Git LFS runs the risk of being uploaded to GitHub
+accidentally, which would constitute a serious data breach.
+
+## Git LFS configuration files
+
+-   `.gitattributes`: lists which files and folders are tracked by Git
+    LFS.
+
+-   `.lfsconfig`: specifies the location of the LFS store, where the
+    data files are saved.
+
+    ::: callout-important
+    By default, Git LFS saves data remotely on GitHub-managed servers.
+    This means that if `.lfsconfig` is deleted (and the deletion is
+    committed), Git LFS will revert to its default settings and push
+    data to GitHub automatically.
+    :::
+
+## Getting started with Git LFS
+
+1.  Install Git LFS in your GenomeDK user space either from the
+    [tarball](https://gist.github.com/pourmand1376/bc48a407f781d6decae316a5cfa7d8ab)
+    or via
+    [conda](https://anaconda.org/channels/conda-forge/packages/git-lfs/overview).
+
+2.  Run `git lfs install`.
+
+    ::: callout-important
+    If you don't initialise Git LFS with `git lfs install`, Git LFS will
+    not manage data files. Instead, files that should be tracked by LFS
+    will be handled by Git as normal and uploaded to GitHub on push.
+    :::
+
+3.  To get an overview of the LFS settings in the repo, run
+    `git lfs env` or `git lfs ls-files` from the project root.
+
+## Adding data to LFS
+
+1.  To add data, move the data file(s) into the `data-raw` folder, which
+    is tracked by LFS.
+2.  Stage the new files (using `git add`). They should now be tracked by
+    LFS.
+3.  Double-check that Git LFS is configured correctly:
+
+    -   The output of `git lfs ls-files` should include the new files.
+    -   `git lfs env` should show that `Endpoint` is set to a local path
+        pointing to the LFS store on GenomeDK.
+
+4.  Commit and push the new data. If you look at the new data file on
+    GitHub, you should see a pointer file rather than the actual data.
+
+## Working on `example-seed-beetle` outside GenomeDK
+
+If you want to work on `example-seed-beetle` on your own machine, you
+can check out the repo without downloading the data files. In fact, it
+is not possible to download the data files via Git LFS, because the LFS
+store path points to a local folder on GenomeDK that your machine cannot
+access.
+
+You don't need Git LFS installed locally, but you do have to tell Git
+not to attempt to fetch data files tracked by Git LFS, as this would
+lead to an error. After cloning the repo, run the following from the
+project root:
+
+``` {.bash filename="Terminal"}
+# Show LFS-tracked files as pointers in the working tree
+git config --local filter.lfs.smudge  "cat"
+# Do not require Git LFS to be installed
+git config --local filter.lfs.required false
+# Disable all LFS processing for tracked files
+git config --local filter.lfs.process ""
+```
+
+With this setup, you won't have access to the actual data or be able to
+run scripts that depend on it. However, you can still run other parts of
+the code and work on data-dependent scripts without executing them.
