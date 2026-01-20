@@ -51,7 +51,7 @@ accidentally, which would constitute a serious data breach.
 3.  To get an overview of the LFS settings in the repo, run
     `git lfs env` or `git lfs ls-files` from the project root.
 
-##### Adding new data
+## Adding data to LFS
 
 1.  To add data, move the data file(s) into the `data-raw` folder, which
     is tracked by LFS.
@@ -80,8 +80,11 @@ lead to an error. After cloning the repo, run the following from the
 project root:
 
 ``` {.bash filename="Terminal"}
+# Show LFS-tracked files as pointers in the working tree
 git config --local filter.lfs.smudge  "cat"
+# Do not require Git LFS to be installed
 git config --local filter.lfs.required false
+# Disable all LFS processing for tracked files
 git config --local filter.lfs.process ""
 ```
 
