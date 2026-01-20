@@ -2,7 +2,7 @@
 title: "Working with Git LFS"
 ---
 
-### Working with Git LFS on GenomeDK
+## Working with Git LFS on GenomeDK
 
 In `example-seed-beetle`, data kept in the `data-raw` folder is tracked
 using [Git LFS](https://git-lfs.com/) with a local LFS store on
@@ -18,7 +18,7 @@ that sensitive data is always tracked by Git LFS. Any data that is not
 tracked by Git LFS runs the risk of being uploaded to GitHub
 accidentally, which would constitute a serious data breach.
 
-##### Git LFS configuration files
+## Git LFS configuration files
 
 -   `.gitattributes`: lists which files and folders are tracked by Git
     LFS.
@@ -33,9 +33,9 @@ accidentally, which would constitute a serious data breach.
     data to GitHub automatically.
     :::
 
-##### Getting started with Git LFS
+## Getting started with Git LFS
 
-1.  Install Git LFS in your user space either from the
+1.  Install Git LFS in your GenomeDK user space either from the
     [tarball](https://gist.github.com/pourmand1376/bc48a407f781d6decae316a5cfa7d8ab)
     or via
     [conda](https://anaconda.org/channels/conda-forge/packages/git-lfs/overview).
@@ -59,14 +59,14 @@ accidentally, which would constitute a serious data breach.
     LFS.
 3.  Double-check that Git LFS is configured correctly:
 
--   The output of `git lfs ls-files` should include the new files.
--   `git lfs env` should show that `Endpoint` is set to a local path
-    pointing to the LFS store on GenomeDK.
+    -   The output of `git lfs ls-files` should include the new files.
+    -   `git lfs env` should show that `Endpoint` is set to a local path
+        pointing to the LFS store on GenomeDK.
 
 4.  Commit and push the new data. If you look at the new data file on
     GitHub, you should see a pointer file rather than the actual data.
 
-### Working on `example-seed-beetle` outside GenomeDK
+## Working on `example-seed-beetle` outside GenomeDK
 
 If you want to work on `example-seed-beetle` on your own machine, you
 can check out the repo without downloading the data files. In fact, it
