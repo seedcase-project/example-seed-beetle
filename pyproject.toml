@@ -31,5 +31,5 @@ dev = [
     "commitizen>=4.13.10",
     "pre-commit>=4.6.0",
     "ruff>=0.15.12",
-    "typos>=1.46.0",
+    "typos>=1.47.0",
 ]
